@@ -426,7 +426,8 @@ class Base(Configuration):
 
 
 class Dev(Base):
-    pass
+    COMPRESS_ENABLED = values.BooleanValue(True)
+    COMPRESS_OFFLINE = values.BooleanValue(True)
 
 
 class ThemeBase(object):
