@@ -104,6 +104,7 @@ class Base(Configuration):
         os.path.join(PROJECT_ROOT, "static"),
     )
     COMPRESS_ENABLED = values.BooleanValue(False)
+    COMPRESS_OFFLINE = values.BooleanValue(False)
     COMPRESS_JS_FILTERS = ['compressor.filters.jsmin.JSMinFilter']
     COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',
                             'compressor.filters.cssmin.CSSMinFilter']
