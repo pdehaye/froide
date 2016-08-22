@@ -4966,11 +4966,11 @@ msgstr "Try the following:"
 
 #: froide/templates/index.html:40
 msgid "Nuclear"
-msgstr "Nuclear"
+msgstr "Advertising"
 
 #: froide/templates/index.html:42
 msgid "Employment"
-msgstr "Employment"
+msgstr "Transportation"
 
 #: froide/templates/index.html:67
 msgid "Read the blog post"
