@@ -4948,7 +4948,7 @@ msgid ""
 "This site publishes Freedom of Information requests and helps you to make "
 "your own!"
 msgstr ""
-"This site publishes Freedom of Information requests and helps you to make "
+"This site publishes requests for personal data and helps you to make "
 "your own!"
 
 #: froide/templates/index.html:24
