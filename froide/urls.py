@@ -21,6 +21,8 @@ from froide.publicbody.views import (PublicBodySitemap, FoiLawSitemap,
                                      JurisdictionSitemap)
 from froide.foirequest.views import FoiRequestSitemap
 
+from sabayon import acme
+
 v1_api = Api(api_name='v1')
 v1_api.register(PublicBodyResource())
 v1_api.register(JurisdictionResource())
@@ -157,6 +159,8 @@ urlpatterns += patterns('',
     (r'^(?P<slug>[\w-]+)/', include('froide.publicbody.jurisdiction_urls'))
 )
 
+urlpatterns += patterns('',
+    url(r'^.well-known/acme-challenge/(?P<token>.*?)/$', 'froide.sabayon.acme'))
 
 def handler500(request):
     """
