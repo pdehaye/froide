@@ -35,6 +35,6 @@
   {% block body_tag %}{% endblock %}
   {% block scripts %}{% endblock %}
   {% block extra_footer %}{% endblock %}
-  {% block tracking_code %}{% endblock %}
+  {% if not debug %}{% block tracking_code %}{% endblock %}{% endif %}
 </body>
 </html>
