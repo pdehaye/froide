@@ -54,7 +54,10 @@ class CSVImporter(object):
         row['slug'] = slugify(row['name'])
         row['classification_slug'] = slugify(row['classification'])
 
-        tags = parse_tags(row.pop('tags', ''))
+        def comma_splitter(tag_string):
+            return [t.strip() for t in tag_string.split(',') if t.strip()]
+
+        tags = comma_splitter(row.pop('tags', ''))
         # Backwards compatible handling of topic__slug
         topic_slug = row.pop('topic__slug', None)
         if topic_slug:
