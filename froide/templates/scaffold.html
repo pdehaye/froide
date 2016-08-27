@@ -35,20 +35,6 @@
   {% block body_tag %}{% endblock %}
   {% block scripts %}{% endblock %}
   {% block extra_footer %}{% endblock %}
-{% block tracking_code %}
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    _paq.push(['setTrackerUrl',  'https://api-0dd5de3c6252d85b2833e1564a73e103.oasis.sandstorm.io']);
-    _paq.push(['setSiteId', 2]);
-    _paq.push(['setApiToken', '4zDa7HRhSi6bljLCsgiC-qy3UHuh5-D1ZmZ48ZcA-xX']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://fggxzn5tdmwyrhclylyc.oasis.sandstorm.io/embed.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Piwik Code -->
-{% endblock %}
+  {% block tracking_code %}{% endblock %}
 </body>
 </html>
