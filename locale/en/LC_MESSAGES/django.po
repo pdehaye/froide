@@ -916,11 +916,11 @@ msgstr "Mark selected requests as checked"
 #: froide/foirequest/admin.py:85
 #, python-format
 msgid "%d request(s) successfully marked as not FoI."
-msgstr "%d request(s) successfully marked as not FoI."
+msgstr "%d request(s) successfully marked as not Subject Access Request."
 
 #: froide/foirequest/admin.py:86
 msgid "Mark selected requests as not FoI"
-msgstr "Mark selected requests as not FoI"
+msgstr "Mark selected requests as not Subject Access Request"
 
 #: froide/foirequest/admin.py:106
 msgid "Successfully marked requests as identical."
@@ -1095,7 +1095,7 @@ msgid ""
 "We received an FoI mail to this address: %(address)s.\n"
 "No corresponding request could be identified, please investigate! %(url)s\n"
 msgstr ""
-"We received an FoI mail to this address: %(address)s.\n"
+"We received a subject access request mail to this address: %(address)s.\n"
 "No corresponding request could be identified, please investigate!\n"
 "%(url)s\n"
 
@@ -1105,13 +1105,13 @@ msgid ""
 "We received a possible spam mail to this address: %(address)s.\n"
 "Please investigate! %(url)s\n"
 msgstr ""
-"We received an FoI mail to this address: %(address)s.\n"
+"We received a subject access request mail to this address: %(address)s.\n"
 "No corresponding request could be identified, please investigate!\n"
 "%(url)s\n"
 
 #: froide/foirequest/foi_mail.py:66 froide/foirequest/tests/test_mail.py:84
 msgid "Unknown FoI-Mail Recipient"
-msgstr "Unknown FoI-Mail Recipient"
+msgstr "Unknown Subject Access Request-Mail Recipient"
 
 #: froide/foirequest/foi_mail.py:183
 msgid "Possible Spam Mail received"
@@ -1300,7 +1300,7 @@ msgstr "Please give a resolution to this request"
 
 #: froide/foirequest/forms.py:411
 msgid "Invalid FoI Request for this operation"
-msgstr "Invalid FoI Request for this operation"
+msgstr "Invalid Subject Access Request for this operation"
 
 #: froide/foirequest/forms.py:438
 #, python-format
@@ -1388,11 +1388,11 @@ msgstr "to"
 
 #: froide/foirequest/models.py:142
 msgid "FoI Request Tag"
-msgstr "FoI Request Tag"
+msgstr "Subject Access Request Tag"
 
 #: froide/foirequest/models.py:143
 msgid "FoI Request Tags"
-msgstr "FoI Request Tags"
+msgstr "Subject Access Request Tags"
 
 #: froide/foirequest/models.py:150
 msgid "Awaiting user confirmation"
@@ -1669,7 +1669,7 @@ msgstr "checked"
 
 #: froide/foirequest/models.py:320
 msgid "is FoI request"
-msgstr "is FoI request"
+msgstr "is Subject Access request"
 
 #: froide/foirequest/models.py:322 froide/publicbody/models.py:50
 #: froide/publicbody/models.py:78 froide/publicbody/models.py:285
@@ -2132,7 +2132,7 @@ msgstr "Mark multiple requests identical"
 
 #: froide/foirequest/templates/foirequest/admin_mark_same_as.html:14
 msgid "These FoI request..."
-msgstr "These FoI request..."
+msgstr "These Subject Access requests..."
 
 #: froide/foirequest/templates/foirequest/admin_mark_same_as.html:23
 msgid "...are identical to this one:"
@@ -2153,7 +2153,7 @@ msgstr "Redeliver these messages..."
 
 #: froide/foirequest/templates/foirequest/admin_redeliver.html:27
 msgid "...to this FOI request:"
-msgstr "...to this FOI request:"
+msgstr "...to this Subject Access request:"
 
 #: froide/foirequest/templates/foirequest/admin_redeliver.html:31
 msgid "Redeliver messages"
@@ -2572,7 +2572,7 @@ msgstr[1] "%(counter)s requests"
 
 #: froide/foirequest/templates/foirequest/list.html:71
 msgid "Show all FoI requests"
-msgstr "Show all FoI requests"
+msgstr "Show all Subject Access requests"
 
 #: froide/foirequest/templates/foirequest/list.html:75
 #, python-format
@@ -2614,12 +2614,12 @@ msgstr "Atom Feed"
 
 #: froide/foirequest/templates/foirequest/list.html:143
 msgid "Show all Non-FoI requests"
-msgstr "Show all Non-FoI requests"
+msgstr "Show all Non-Subject Access requests"
 
 #: froide/foirequest/templates/foirequest/list_unchecked.html:7
 #: froide/foirequest/views.py:184
 msgid "FoI Requests"
-msgstr "FoI Requests"
+msgstr "Subject Access Requests"
 
 #: froide/foirequest/templates/foirequest/list_unchecked.html:16
 #: froide/foirequest/templates/foirequest/show.html:623
@@ -2635,7 +2635,7 @@ msgstr "Mark as checked"
 #: froide/foirequest/templates/foirequest/list_unchecked.html:23
 #: froide/foirequest/templates/foirequest/show.html:662
 msgid "Mark as NOT FoI"
-msgstr "Mark as NOT FoI"
+msgstr "Mark as NOT Subject Access"
 
 #: froide/foirequest/templates/foirequest/list_unchecked.html:33
 msgid "View on Site"
@@ -3156,7 +3156,7 @@ msgid ""
 "This request is not an FoI request. This site is only for requesting "
 "specific information from public bodies."
 msgstr ""
-"This request is not an FoI request. This site is only for requesting "
+"This request is not a Subject Access Request. This site is only for requesting "
 "specific information from data controllers."
 
 #: froide/foirequest/templates/foirequest/show.html:88
@@ -3587,7 +3587,7 @@ msgstr "Marked as checked"
 #: froide/foirequest/templates/foirequest/show.html:657
 #: froide/foirequest/templates/foirequest/show.html:665
 msgid "Marked as NOT FoI"
-msgstr "Marked as NOT FoI"
+msgstr "Marked as NOT Subject Access"
 
 #: froide/foirequest/templates/foirequest/show.html:675
 msgid "Extend Deadline by Months"
@@ -3782,7 +3782,7 @@ msgstr "Status"
 
 #: froide/foirequest/views.py:336
 msgid "You need to setup a default FOI Law object"
-msgstr ""
+msgstr "You need to setup a default Law object"
 
 #: froide/foirequest/views.py:407
 msgid ""
@@ -3893,7 +3893,7 @@ msgstr "Your document was added to the message as a new attachment."
 
 #: froide/foirequest/views.py:755
 msgid "Request marked as not a FoI request."
-msgstr "Request marked as not a FoI request."
+msgstr "Request marked as not a Subject Access request."
 
 #: froide/foirequest/views.py:769
 msgid "Request marked as checked."
@@ -4203,11 +4203,11 @@ msgstr "Enabled"
 
 #: froide/foisite/models.py:18
 msgid "FOI Site"
-msgstr "FOI Site"
+msgstr "Data Protection Site"
 
 #: froide/foisite/models.py:19
 msgid "FOI Sites"
-msgstr "FOI Sites"
+msgstr "Data Protection Sites"
 
 #: froide/foisite/templates/foisite/banner.html:8
 #, python-format
@@ -4217,7 +4217,7 @@ msgid ""
 "%(name)s</a>?"
 msgstr ""
 "It looks like you are visiting from %(country_name)s. Did you know that "
-"there is an <a href=\"%(url)s\">FOI site for %(country_name)s called "
+"there is an <a href=\"%(url)s\">Data Protection site for %(country_name)s called "
 "%(name)s</a>?"
 
 #: froide/frontpage/models.py:20 froide/frontpage/models.py:40
@@ -4596,7 +4596,7 @@ msgstr "Facts about %(name)s"
 #: froide/publicbody/templates/publicbody/jurisdiction.html:110
 #, python-format
 msgid "FOI laws in %(name)s"
-msgstr "FOI laws in %(name)s"
+msgstr "Data protection laws in %(name)s"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html:118
 #, python-format
@@ -4690,8 +4690,8 @@ msgstr "Summary of Request"
 #, fuzzy, python-format
 msgid "One requests to this public body"
 msgid_plural "%(count)s requests to this public body"
-msgstr[0] "All FOI requests for this data controller"
-msgstr[1] "All FOI requests for this data controller"
+msgstr[0] "All subject access requests for this data controller"
+msgstr[1] "All subject access requests for this data controller"
 
 #: froide/publicbody/templates/publicbody/show.html:130
 #, fuzzy
@@ -5302,7 +5302,7 @@ msgstr "privacy"
 #~ msgstr "Your Privacy"
 
 #~ msgid "For FoI Officers"
-#~ msgstr "For FoI Officers"
+#~ msgstr "For Data Protection Officers"
 
 #, fuzzy
 #~ msgid "Add tags to these items"
@@ -5327,7 +5327,7 @@ msgstr "privacy"
 #~ msgstr "Preview Request"
 
 #~ msgid "How to make a successful FOI Request"
-#~ msgstr "How to make a successful FOI Request"
+#~ msgstr "How to make a successful Subject Access Request"
 
 #~ msgid "Write a request to %(name)s"
 #~ msgstr "Write a request to %(name)s"
