@@ -133,18 +133,25 @@ def _deliver_mail(email, mail_string=None, manual=False):
             + email['resent_to'] + email['resent_cc']
     # TODO: BCC?
 
+    print "received_list", received_list
+
     domains = settings.FOI_EMAIL_DOMAIN
     if isinstance(domains, string_types):
         domains = [domains]
+    print "domains", domains
 
     mail_filter = lambda x: x[1].lower().endswith(tuple(["@%s".lower() % d for d in domains]))
     received_list = [r for r in received_list if mail_filter(r)]
+    print "received_list_2", received_list
 
     # normalize to first FOI_EMAIL_DOMAIN
     received_list = [(x[0], '@'.join(
         (x[1].split('@')[0], domains[0]))) for x in received_list]
 
+    print "received_list_3", received_list
+
     if mail_string is not None:
+        print "mail_string is not none"
         # make original mail storeable as unicode
         b64_encoded = False
         try:
@@ -155,6 +162,7 @@ def _deliver_mail(email, mail_string=None, manual=False):
 
     already = set()
     for received in received_list:
+        print "fetching one"
         secret_mail = received[1]
         if secret_mail in already:
             continue
