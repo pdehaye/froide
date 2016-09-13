@@ -2526,9 +2526,10 @@ msgstr ""
 
 #: froide/foirequest/templates/foirequest/emails/user_footer.txt:2
 msgid ""
-"This message was sent through the PersonalData.IO gateway\n"
+"Support Froide by donating to Open Knowledge Foundation Germany:\n"
+-"http://okfn.de/spenden/\n"
+msgstr "This message was sent through the PersonalData.IO gateway\n"
 "http://www.PersonalData.IO\n"
-msgstr ""
 
 #: froide/foirequest/templates/foirequest/list.html:5
 msgid "RSS Feed for these requests"
