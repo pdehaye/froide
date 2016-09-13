@@ -4637,7 +4637,7 @@ msgstr ""
 
 #: froide/publicbody/templates/publicbody/show.html:18
 msgid "Make a Request to this public body!"
-msgstr "Make a Request to this public body!"
+msgstr "Make a Request to this data controller!"
 
 #: froide/publicbody/templates/publicbody/show.html:28
 msgid "Classification:"
@@ -5017,7 +5017,7 @@ msgid ""
 "and receive access to information from Public Bodies concerning public "
 "affairs."
 msgstr ""
-"Every European citizen has the right under Data Protection Laws to ask for "
+"Every European resident has the right under Data Protection Laws to ask for "
 "and receive access to their personal information from Data Controllers."
 
 #: froide/templates/index.html:106
