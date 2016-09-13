@@ -140,7 +140,7 @@ def _deliver_mail(email, mail_string=None, manual=False):
         domains = [domains]
     print "domains", domains
 
-    mail_filter = lambda x: x[1].lower().endswith(tuple(["@%s".lower() % d for d in domains]))
+    mail_filter = lambda x: x[1].lower().endswith(tuple([("@%s" % d).lower() for d in domains]))
     received_list = [r for r in received_list if mail_filter(r)]
     print "received_list_2", received_list
 
