@@ -2526,8 +2526,8 @@ msgstr ""
 
 #: froide/foirequest/templates/foirequest/emails/user_footer.txt:2
 msgid ""
-"Support Froide by donating to Open Knowledge Foundation Germany:\n"
-"http://okfn.de/spenden/\n"
+"This message was sent through the PersonalData.IO gateway\n"
+"http://www.PersonalData.IO\n"
 msgstr ""
 
 #: froide/foirequest/templates/foirequest/list.html:5
