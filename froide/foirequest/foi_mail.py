@@ -55,12 +55,10 @@ def send_foi_mail(subject, message, from_email, recipient_list,
 
 def _process_mail(mail_string, mail_type=None, manual=False):
     parser = EmailParser()
-    print "Processing", mail_string, mail_type, manual
     if mail_type is None:
         email = parser.parse(BytesIO(mail_string))
     elif mail_type == 'postmark':
         email = parser.parse_postmark(json.loads(mail_string.decode('utf-8')))
-    print "Processed", mail_string, mail_type, manual
     return _deliver_mail(email, mail_string=mail_string, manual=manual)
 
 
@@ -86,7 +84,6 @@ def create_deferred(secret_mail, mail_string, b64_encoded=False, spam=False,
 
 
 def get_alternative_mail(req):
-    print "get_alternative_mail"
     name = get_name_from_number(req.pk)
     domains = settings.FOI_EMAIL_DOMAIN
     if isinstance(domains, string_types):
@@ -99,7 +96,6 @@ def get_alternative_mail(req):
 
 
 def get_foirequest_from_mail(email):
-    print "get_foirequest_from_email"
     from .models import FoiRequest
 
     if '_' in email:
@@ -113,7 +109,6 @@ def get_foirequest_from_mail(email):
         if hero_name != hero:
             return None
         try:
-            print "Found pk", num
             return FoiRequest.objects.get(pk=num)
         except FoiRequest.DoesNotExist:
             return None
@@ -126,32 +121,26 @@ def get_foirequest_from_mail(email):
 
 
 def _deliver_mail(email, mail_string=None, manual=False):
-    print "deliver_mail"
     from .models import DeferredMessage
 
     received_list = email['to'] + email['cc'] \
             + email['resent_to'] + email['resent_cc']
     # TODO: BCC?
 
-    print "received_list", received_list
 
     domains = settings.FOI_EMAIL_DOMAIN
     if isinstance(domains, string_types):
         domains = [domains]
-    print "domains", domains
 
     mail_filter = lambda x: x[1].lower().endswith(tuple([("@%s" % d).lower() for d in domains]))
     received_list = [r for r in received_list if mail_filter(r)]
-    print "received_list_2", received_list
 
     # normalize to first FOI_EMAIL_DOMAIN
     received_list = [(x[0], '@'.join(
         (x[1].split('@')[0], domains[0]))) for x in received_list]
 
-    print "received_list_3", received_list
 
     if mail_string is not None:
-        print "mail_string is not none"
         # make original mail storeable as unicode
         b64_encoded = False
         try:
@@ -162,7 +151,6 @@ def _deliver_mail(email, mail_string=None, manual=False):
 
     already = set()
     for received in received_list:
-        print "fetching one"
         secret_mail = received[1]
         if secret_mail in already:
             continue
@@ -197,12 +185,10 @@ def _deliver_mail(email, mail_string=None, manual=False):
                         spam=True, subject=_('Possible Spam Mail received'), body=spam_message)
                     continue
 
-        print "about to add message", email, mail_filter
         foi_request.add_message_from_email(email, mail_string)
 
 
 def _fetch_mail():
-    print "fetch mail"
     for rfc_data in get_unread_mails(settings.FOI_EMAIL_HOST_IMAP,
             settings.FOI_EMAIL_PORT_IMAP,
             settings.FOI_EMAIL_ACCOUNT_NAME,
@@ -212,7 +198,6 @@ def _fetch_mail():
 
 
 def fetch_and_process():
-    print "fetch and pro"
     count = 0
     for rfc_data in _fetch_mail():
         _process_mail(rfc_data)
