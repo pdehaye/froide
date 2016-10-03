@@ -164,8 +164,10 @@ urlpatterns += [
     url(r'^(?P<slug>[\w-]+)/', include('froide.publicbody.jurisdiction_urls'))
 ]
 
-urlpatterns += patterns('',
-    url(r'^.well-known/acme-challenge/(?P<token>.*?)/$', 'froide.sabayon.acme'))
+from froide.sabayon import acme
+urlpatterns += [
+    url(r'^.well-known/acme-challenge/(?P<token>.*?)/$', acme, name = "sabayon_acme")
+]
 
 def handler500(request):
     """
