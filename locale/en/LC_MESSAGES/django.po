@@ -115,13 +115,12 @@ msgid ""
 "Optional. Your address will not be displayed publicly and is only needed in "
 "case a public body needs to send you paper."
 msgstr ""
-"Optional. This information will not be displayed publicly and is only needed in "
-"case a data controller needs to link your different identities together."
-"Please enter one attribute on each line, on its own"
+"Optional. This information will be sent alongside any request you make. "
+"It is meant to help the data controller link your different identities together. " 
 
 #: froide/account/forms.py:38 froide/account/forms.py:169
 msgid "Street, Post Code, City"
-msgstr "Address, cookie values, phone number, logins, etc. This will be blacked out from the site if you decide to show your request publicly. Please provide each identifier on a separate line, on its own."
+msgstr "Address, cookie values, phone number, logins, URL to scan of ID, etc. This will be blacked out from the site if you decide to show your request publicly. Please provide each identifier on a separate line, on its own."
 
 #: froide/account/forms.py:40 froide/account/forms.py:141
 #: froide/account/forms.py:155
