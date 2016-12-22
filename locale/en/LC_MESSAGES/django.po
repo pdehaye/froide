@@ -108,19 +108,20 @@ msgstr "Last Name"
 
 #: froide/account/forms.py:33
 msgid "Mailing Address"
-msgstr "Mailing Address"
+msgstr "Additional identifiers and attributes"
 
 #: froide/account/forms.py:34
 msgid ""
 "Optional. Your address will not be displayed publicly and is only needed in "
 "case a public body needs to send you paper."
 msgstr ""
-"Optional. Your address will not be displayed publicly and is only needed in "
-"case a data controller needs to send you paper."
+"Optional. This information will not be displayed publicly and is only needed in "
+"case a data controller needs to link your different identities together."
+"Please enter one attribute on each line, on its own"
 
 #: froide/account/forms.py:38 froide/account/forms.py:169
 msgid "Street, Post Code, City"
-msgstr "Street, Post Code, City"
+msgstr "Address, cookie values, phone number, logins, etc. This will be blacked out from the site if you decide to show your request publicly. Please provide each identifier on a separate line, on its own."
 
 #: froide/account/forms.py:40 froide/account/forms.py:141
 #: froide/account/forms.py:155
@@ -1137,7 +1138,7 @@ msgstr "Body"
 
 #: froide/foirequest/forms.py:39
 msgid "Specify your request here..."
-msgstr "Specify your request here..."
+msgstr "Please specify your request here. If this request relies on a very specific template, it might be OK to leave this empty."
 
 #: froide/foirequest/forms.py:43
 msgid "Don't wrap in template"
@@ -3025,7 +3026,7 @@ msgstr "Your last name"
 
 #: froide/foirequest/templates/foirequest/request.html:340
 msgid "Your post address"
-msgstr "Your post address"
+msgstr "Additional identifiers and attributes"
 
 #: froide/foirequest/templates/foirequest/request.html:389
 msgid ""
@@ -4664,7 +4665,7 @@ msgstr "Contact:"
 #: froide/publicbody/templates/publicbody/show.html:50
 #, fuzzy
 msgid "Mailing Address:"
-msgstr "Mailing Address"
+msgstr "Additional identifiers and attributes"
 
 #: froide/publicbody/templates/publicbody/show.html:55
 #, fuzzy
