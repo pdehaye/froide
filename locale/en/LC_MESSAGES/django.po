@@ -1137,7 +1137,7 @@ msgstr "Body"
 
 #: froide/foirequest/forms.py:39
 msgid "Specify your request here..."
-msgstr "Please specify your request here. If this request relies on a very specific template, it might be OK to leave this empty."
+msgstr "Please specify your request here. For very detailed templates relating to campaigns, it is usually OK to leave this empty, but you do need to add the relevant attributes in the field below or your account page."
 
 #: froide/foirequest/forms.py:43
 msgid "Don't wrap in template"
