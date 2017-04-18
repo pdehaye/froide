@@ -129,7 +129,7 @@ def set_last_message_date_on_message_received(sender, message=None, **kwargs):
 def send_foimessage_sent_confirmation(sender, message=None, **kwargs):
     messages = sender.get_messages()
     if len(messages) == 1:
-        subject = _("%(site_name)s: Your Freedom of Information Request was sent")
+        subject = _("%(site_name)s: Your Message was sent")
         template = "foirequest/emails/confirm_foi_request_sent.txt"
     else:
         subject = _("%(site_name)s: Your Message was sent")

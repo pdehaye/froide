@@ -2528,8 +2528,8 @@ msgstr ""
 msgid ""
 "Support Froide by donating to Open Knowledge Foundation Germany:\n"
 "http://okfn.de/spenden/\n"
-msgstr "This message was sent through the PersonalData.IO gateway\n"
-"http://www.PersonalData.IO\n"
+msgstr "This message was sent through the manual.PersonalData.IO gateway\n"
+"http://manual.PersonalData.IO\n"
 
 #: froide/foirequest/templates/foirequest/list.html:5
 msgid "RSS Feed for these requests"
