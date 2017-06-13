@@ -611,7 +611,7 @@ class AmazonS3(object):
     AWS_ACCESS_KEY_ID = values.Value('')
     AWS_SECRET_ACCESS_KEY = values.Value('')
     AWS_STORAGE_BUCKET_NAME = values.Value('')
-    AWS_S3_SECURE_URLS = values.Value(False)
+    AWS_S3_SECURE_URLS = values.Value(True)
     AWS_QUERYSTRING_AUTH = values.Value(False)
 
 
