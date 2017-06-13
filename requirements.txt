@@ -1,4 +1,4 @@
-pip>9
+pip==8.1.2
 setuptools>36
 Django>1.10,<1.11
 Markdown==2.6.6
