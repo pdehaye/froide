@@ -53,6 +53,8 @@ class Base(Configuration):
         'froide.redaction',
         'froide.foisite',
         'froide.helper',
+
+	'django.contrib.redirects'
     ])
 
     CACHES = values.CacheURLValue('dummy://')
@@ -188,6 +190,7 @@ class Base(Configuration):
         'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
+	'django.contrib.redirects.middleware.RedirectFallbackMiddleware'
     ]
 
     # ######### I18N and L10N ##################
