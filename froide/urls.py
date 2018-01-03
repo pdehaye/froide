@@ -68,7 +68,7 @@ if settings.FROIDE_CONFIG.get('api_activated', True):
 
 urlpatterns += [
     # Translators: URL part
-    url(r'^$', index, name='index'),
+    url(r'^index/$', index, name='index'),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}),
     url(r'^dashboard/$', dashboard, name='dashboard')
 ]
